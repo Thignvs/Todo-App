@@ -9,7 +9,7 @@ const ThemeToggle = () => {
 
     return (
         <div>
-            <button onClick={toggleTheme} className='bg-gradient-to-br from-GradientPurple border to-GradientBlue dark:border-DarkGrayishBlueDark  flex gap-3 px-1 rounded-full py-1'>
+            <button onClick={toggleTheme} className='bg-gradient-to-br from-GradientPurple border to-GradientBlue dark:border-DarkGrayishBlueDark  flex gap-3 p-1 rounded-full'>
                 <img className={`transition duration-300 ${theme === 'dark' ? 'opacity-100' : 'translate-x-10 opacity-0'}`} src={dark} />
                 <img className={`transition duration-300 ${theme === 'dark' ? '-translate-x-10 opacity-0' : ' opacity-100'}`} src={light} />
             </button>

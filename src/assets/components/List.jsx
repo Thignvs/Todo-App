@@ -76,8 +76,8 @@ const List = () => {
     };
     return (
         <div className="flex flex-col mx-auto w-full mt-8 max-w-screen-xl">
-            <div className='text-VeryLightGray justify-between flex items-center pb-20'>
-                <h1 className='font-bold tracking-widest text-4xl cursor-pointer'>TODO</h1>
+            <div className='flex text-VeryLightGray justify-between items-center pb-20'>
+                <h1 className='font-bold tracking-widest text-4xl cursor-pointer pt-2'>TODO</h1>
                 <div>
                     <ThemeToggle />
                 </div>
@@ -102,7 +102,7 @@ const List = () => {
                 <Droppable droppableId={taskListId}>
                     {(provided) => (
                         <ul
-                            className="bg-VeryLightGray flex flex-col rounded-t-md dark:bg-VeryDarkDesaturatedBlueDark max-h-screen divide-LightGrayishBlue dark:divide-VeryDarkGrayishBlue divide-y"
+                            className="bg-VeryLightGray  flex flex-col rounded-t-md dark:bg-VeryDarkDesaturatedBlueDark max-h-screen divide-LightGrayishBlue dark:divide-VeryDarkGrayishBlue divide-y"
                             {...provided.droppableProps}
                             ref={provided.innerRef}
                         >
@@ -137,7 +137,7 @@ const List = () => {
                 </Droppable>
             </DragDropContext>
             {tasks.length > 0 && (
-                <div className='flex flex-row-reverse justify-between px-5 py-3 rounded-b-md border-t border-LightGrayishBlue dark:border-VeryDarkGrayishBlue bg-VeryLightGray dark:bg-VeryDarkDesaturatedBlueDark  text-DarkGrayishBlue dark:text-DarkGrayishBlueDark '>
+                <div className='flex flex-row-reverse justify-between px-5 py-3 rounded-b-md border-t border-LightGrayishBlue shadow-2xl dark:border-VeryDarkGrayishBlue bg-VeryLightGray dark:bg-VeryDarkDesaturatedBlueDark  text-DarkGrayishBlue dark:text-DarkGrayishBlueDark '>
                     {showCompleted && (
                         <button onClick={handleClearCompleted} className="">
                             Clear Completed
